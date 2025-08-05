@@ -24,18 +24,22 @@ function ChatContainer({ currentChat, currentUser, socket }) {
             to: currentChat._id,
             from: currentUser._id,
             message: msg,
-        })
+        });
 
         const msgs = [...messages];
-        msgs.push({ fromSelf: true, message: msg });
+        msgs.push({ fromSelf: true, message: msg }); //把自己发的消息加入messgaes数组
         setMessages(msgs);
     };
 
+    //把别人的消息加入messgaes数组
     useEffect(() => {
         if (socket.current) {  //如果不是undefined
             socket.current.on("msg-receive", (msg) => {
                 setArrivalMessage({ fromSelf: false, message: msg });
             })
+            return () => {
+                socket.current.off("msg-receive", handleReceive); // 卸载监听器
+            };
         }
     }, [])
 
@@ -45,6 +49,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
         arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
     }, [arrivalMessage])
 
+    //这是一个动画, 不用管
     useEffect(() => {
         scrollRef.current?.scrollIntoView({ behaviour: "smooth" })
         //it will scroll into the view the new messages, so it will have an animation effect

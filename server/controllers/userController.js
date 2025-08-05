@@ -63,7 +63,7 @@ module.exports.login = async (req,res,next) => {
         }
 
         delete usernameCheck.password;
-        return res.json({status: true, usernameCheck})
+        return res.json({status: true, usernameCheck});
 
     }catch(err) {
         console.error("Error occurred in register function:", err);

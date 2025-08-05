@@ -58,7 +58,7 @@ io.on("connection",(socket)=>{
     const sendUserSocket = onlineUsers.get(data.to);
 
     if(sendUserSocket){  //if the user is online
-      //emit the message  to the user
+      //emit the message to the user
       socket.to(sendUserSocket).emit("msg-receive",data.message);
     }
     //如果不在线, 先存在database

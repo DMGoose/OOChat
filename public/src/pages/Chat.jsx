@@ -40,6 +40,7 @@ function Chat() {
         if(currentUser){
             socket.current = io(host);
             //只要current user login, 就把currentUser_id传递到 后端的gloabl map
+            // socket.emit(...) 向后端发送一个event "add-user"，并传用户 ID。
             socket.current.emit("add-user",currentUser._id);
         }
     },[currentUser])
@@ -80,8 +81,6 @@ function Chat() {
                 (<Welcome currentUser={currentUser}/>) : 
                 (<ChatContainer currentChat={currentChat} currentUser={currentUser} socket={socket}/>)
             }
-
-            
         </div>
         <div className="chat-messages"></div>
         <div className="chat-input"></div>

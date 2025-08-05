@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../AJAX"
+		},
+		{
+			"path": "../../../../../Promise-code"
+		},
+		{
+			"path": "../../../../../typescript-code"
+		},
+		{
+			"path": "../../../../../Vue-communication/vue3_communication"
+		},
+		{
+			"path": "../../../../../Vue3+TS-project/vite-project"
+		},
+		{
+			"path": "../../../../../../1.SUPCOM/Module 4/code"
+		},
+		{
+			"path": "../../../../../Vue-ts-full/vue-admin"
+		},
+		{
+			"path": "../../../../../Recourses/11.3+TinDog+Project/11.3 TinDog Project"
+		},
+		{
+			"path": "../../../../../todoList"
+		},
+		{
+			"path": "../../../../../Flask + vue 图书管理系统/book-fontend"
+		},
+		{
+			"path": "../../../../../React"
+		},
+		{
+			"path": "../../../../../NextJS"
+		},
+		{
+			"path": "C:/Users/Gintoki/Downloads/node-react-ecommerce-master"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AJAX"
+	}
+}
